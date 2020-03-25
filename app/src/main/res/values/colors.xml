@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryDark">#40bfc1</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="kirmizi">#f0134d</color>
+    <color name="turuncu1">#ff6f5e</color>
+    <color name="gri">#f5f0e3</color>
+    <color name="turkuaz1">#40bfc1</color>
+
+    <color name="beyaz">#fff</color>
+
+    <color name="sari">#ffcc00</color>
+    <color name="turuncu2">#ff6666</color>
+    <color name="bordo">#cc0066</color>
+    <color name="turkuaz2">#66cccc</color>
+
 </resources>
