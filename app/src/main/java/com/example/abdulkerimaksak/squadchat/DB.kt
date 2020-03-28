@@ -13,7 +13,7 @@ val COL_EMAIL = "eposta"
 
 class DB(var context: Context):SQLiteOpenHelper(context, DATABASE_NAME,null,1){
     override fun onCreate(db: SQLiteDatabase?) {
-        val createTable = "CREATE TABLE" + TABLE_NAME +" ("+
+        val createTable = " CREATE TABLE " + TABLE_NAME +" ("+
                 COL_ID+" INTEGER PRIMARY KEY AUTOINCREMENT," +
                 COL_EMAIL + " VARCHAR(256) )";
 
@@ -54,7 +54,7 @@ class DB(var context: Context):SQLiteOpenHelper(context, DATABASE_NAME,null,1){
 
         result.close()
         db.close()
-        return  list
+        return list
     }
 
 }

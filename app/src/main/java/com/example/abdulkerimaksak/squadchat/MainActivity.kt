@@ -10,6 +10,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val context = this
+        var db = DB(context)
+        var user = User()
+
+        var email:String = ""
+
+        var data =db.readData()
+        for(i in 0..(data.size-1)){
+            email = data.get(i).email
+        }
+
         val timerThread = object : Thread() {
             override fun run() {
                 try {
@@ -17,8 +28,15 @@ class MainActivity : AppCompatActivity() {
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 } finally {
-                    val intent = Intent(this@MainActivity, MessageActivity::class.java)
-                    startActivity(intent)
+                    if(email == ""){
+                        val intent = Intent(this@MainActivity, LoginActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }else {
+                        val intent = Intent(this@MainActivity, MessageActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
                 }
             }
         }
